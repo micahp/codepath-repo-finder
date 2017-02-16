@@ -1,15 +1,15 @@
-# Lab 3 - *Name of App Here*
+# Lab 3 - *GitHub Repo Finder*
 
-**Name of your app** is a GitHub Repo search app using the [GitHub API](https://developer.github.com/v3/search/#search-repositories).
+**GitHub Repo Finder** is a GitHub Repo search app using the [GitHub API](https://developer.github.com/v3/search/#search-repositories).
 
-Time spent: **X** hours spent in total
+Time spent: **4** hours spent in total
 
 ## User Stories
 
 The following **required** functionality is completed:
 
-- [ ] Table rows for search results should be dynamic height according to the content height.
-- [ ] Custom cells should have the proper Auto Layout constraints.
+- [X] Table rows for search results should be dynamic height according to the content height.
+- [X] Custom cells should have the proper Auto Layout constraints.
 
 The following **additional** features are implemented:
 
@@ -17,24 +17,24 @@ The following **additional** features are implemented:
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-1.
+1. Making delightlful interfaces 
 2.
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://media.giphy.com/media/l0He6jqfJUGh60jcc/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
+GIF created with [Giphy](http://www.giphy.com).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+I had trouble programmatically moving the author label to be exactly underneath the repo name depending on how long it was without having extra space.
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2017] [name of copyright owner]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
