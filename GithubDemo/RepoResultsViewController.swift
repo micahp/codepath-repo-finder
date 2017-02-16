@@ -27,8 +27,8 @@ class RepoResultsViewController: UIViewController {
         
         // Add delegate to tableView + other stuff
         tableView.dataSource = self
-        tableView.estimatedRowHeight = 100
-        tableView.rowHeight = UITableViewAutomaticDimension
+//        tableView.estimatedRowHeight = 100
+//        tableView.rowHeight = UITableViewAutomaticDimension
 
         // Add SearchBar to the NavigationBar
         searchBar.sizeToFit()
@@ -48,8 +48,8 @@ class RepoResultsViewController: UIViewController {
 
             // Print the returned repositories to the output window
             for repo in newRepos {
-                print(repo)
                 if let repo = repo as? GithubRepo {
+                    print(repo)
                     self.repos.append(repo)
                 }
             }
@@ -77,17 +77,23 @@ extension RepoResultsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "repoCell") as! RepoCell
         let repo = self.repos[indexPath.row]
+        
         cell.name.text = repo.name
+        cell.name.sizeToFit()
+        
         cell.owner.text = repo.ownerHandle
-        cell.descriptionLabel.text = repo.description
-        cell.forksLabel.text = "\(repo.forks)"
-        cell.starsLabel.text = "\(repo.stars)"
+        cell.owner.frame.origin.y = cell.name.frame.origin.y + cell.name.frame.size.height + 10
+        
+        cell.descriptionLabel.text = repo.repoDescription
+        
+        cell.forksLabel.text = repo.forks?.description
+        cell.starsLabel.text = repo.stars?.description
         
         let avatarURL = URL(string: repo.ownerAvatarURL!)
         cell.authorImageView.setImageWith(avatarURL!)
         
-        cell.forksImageView = UIImageView(image: UIImage(named: "fork")!)
-        cell.starsImageView = UIImageView(image: UIImage(named: "star")!)
+        cell.forksImageView.image = UIImage(named: "fork")
+        cell.starsImageView.image = UIImage(named: "star")
         
         return cell
     }

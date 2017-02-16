@@ -99,7 +99,7 @@ class GithubRepo: CustomStringConvertible {
     }
 
     // Creates a text representation of a GitHub repo
-    var description: String {
+    var description: String {		
         return "[Name: \(self.name!)]" +
             "\n\t[Stars: \(self.stars!)]" +
             "\n\t[Forks: \(self.forks!)]" +
